@@ -1,0 +1,105 @@
+
+
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Entry Page */
+.entry-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('flora-7231668_640.webp') no-repeat center center/cover;
+    transition: transform 1s;
+}
+
+.entry-content {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.entry-page.hide {
+    transform: rotateY(90deg);
+}
+
+/* To-Do Page */
+.todo-page {
+    display: none;
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    transition: background-color 0.5s;
+}
+
+.todo-page.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-entry {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 5px;
+}
+
+#add-task {
+    padding: 5px 10px;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.task-item.complete {
+    text-decoration: line-through;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.task-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.task-buttons button.complete {
+    color: green;
+}
+
+.task-buttons button.delete {
+    color: red;
+}

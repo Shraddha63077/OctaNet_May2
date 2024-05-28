@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="entry-page">
+        <div class="entry-content">
+            <h1>Welcome to Your To-Do List</h1>
+            <button id="enter-button">Enter</button>
+        </div>
+    </div>
+
+    <div class="todo-page">
+        <div class="header">
+            <h1>To-Do List</h1>
+            <button id="theme-toggle">Toggle Dark/Light Mode</button>
+        </div>
+        <div class="task-entry">
+            <input type="text" id="task-input" placeholder="Enter a new task">
+            <input type="date" id="task-date">
+            <select id="task-category">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Other">Other</option>
+            </select>
+            <button id="add-task">Add Task</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
