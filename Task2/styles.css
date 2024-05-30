@@ -1,105 +1,110 @@
-
-
-
-/* General Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Entry Page */
-.entry-page {
+body {
+    font-family: 'Edu TAS Beginner', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('flora-7231668_640.webp') no-repeat center center/cover;
-    transition: transform 1s;
+    margin: 0;
+    background: url('193233774-gingham-pattern-set-floral-checked-plaids-in-pink-white-seamless-pastel-vichy-tartan-backgrounds.jpg') no-repeat center center fixed;
+    background-size: 1109px 724px;
+    transition: background 0.3s;
 }
 
-.entry-content {
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
+    width: 300px;
 }
 
-.entry-page.hide {
-    transform: rotateY(90deg);
-}
-
-/* To-Do Page */
-.todo-page {
-    display: none;
-    padding: 20px;
-    background-color: #f4f4f4;
-    min-height: 100vh;
-    transition: background-color 0.5s;
-}
-
-.todo-page.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+h1 {
+    font-weight: bold;
 }
 
 .task-entry {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#task-input {
-    flex-grow: 1;
-    padding: 5px;
-}
-
-#add-task {
-    padding: 5px 10px;
-}
-
-#task-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.task-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.task-entry input, .task-entry select, .task-entry button {
+    margin: 5px;
     padding: 10px;
-    background-color: #fff;
     border: 1px solid #ccc;
-    margin-bottom: 10px;
     border-radius: 5px;
+    width: calc(100% - 22px);
 }
 
-.task-item.complete {
-    text-decoration: line-through;
-}
-
-.task-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.task-buttons button {
-    background-color: transparent;
+.task-entry button {
+    background-color: #4CAF50;
+    color: white;
     border: none;
     cursor: pointer;
 }
 
-.task-buttons button.complete {
-    color: green;
+.task-entry button:hover {
+    background-color: #45a049;
 }
 
-.task-buttons button.delete {
-    color: red;
+.task-list ul {
+    list-style-type: none;
+    padding: 0;
 }
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f9f9f9;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: transform 3s;
+}
+
+.task-list li.complete {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-list li .actions button {
+    margin-left: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#mode-toggle {
+    margin-top: 20px;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#mode-toggle.light-mode {
+    background: #f0f0f0;
+    color: #333;
+}
+
+body.dark {
+    background: #333;
+    color: white;
+}
+
+body.dark .container {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+body.dark #mode-toggle {
+    background: #f0f0f0;
+    color: #333;
+}
+
+
+
+
+
